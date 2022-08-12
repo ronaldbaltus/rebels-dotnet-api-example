@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Rebels.ExampleProject.CQRS\Rebels.ExampleProject.CQRS.csproj" />
+    <ProjectReference Include="..\..\src\Rebels.ExampleProject.CQRS\Rebels.ExampleProject.CQRS.csproj" />
   </ItemGroup>
 
 </Project>

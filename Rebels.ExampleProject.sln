@@ -3,22 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rebels.ExampleProject.Api", "Rebels.ExampleProject.Api\Rebels.ExampleProject.Api.csproj", "{86D93130-D9C3-47A9-A399-B57DE6CE4784}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rebels.ExampleProject.Api", "src\Rebels.ExampleProject.Api\Rebels.ExampleProject.Api.csproj", "{86D93130-D9C3-47A9-A399-B57DE6CE4784}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rebels.ExampleProject.CQRS", "Rebels.ExampleProject.CQRS\Rebels.ExampleProject.CQRS.csproj", "{E742F4ED-2783-4BBE-96AB-3880CE737798}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rebels.ExampleProject.CQRS", "src\Rebels.ExampleProject.CQRS\Rebels.ExampleProject.CQRS.csproj", "{E742F4ED-2783-4BBE-96AB-3880CE737798}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rebels.ExampleProject.Data", "Rebels.ExampleProject.Data\Rebels.ExampleProject.Data.csproj", "{30800CEC-BC7C-4F21-A41E-E4413F91AFFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rebels.ExampleProject.Data", "src\Rebels.ExampleProject.Data\Rebels.ExampleProject.Data.csproj", "{30800CEC-BC7C-4F21-A41E-E4413F91AFFC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rebels.ExampleProject.Dtos", "Rebels.ExampleProject.Dtos\Rebels.ExampleProject.Dtos.csproj", "{740E20C6-2FBE-4763-A6EA-40CDEF9EE7CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rebels.ExampleProject.Dtos", "src\Rebels.ExampleProject.Dtos\Rebels.ExampleProject.Dtos.csproj", "{740E20C6-2FBE-4763-A6EA-40CDEF9EE7CF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rebels.ExampleProject.Db", "Rebels.ExampleProject.Db\Rebels.ExampleProject.Db.csproj", "{9FF445B9-10B1-4DA0-BCF2-0D0D60D5AFB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rebels.ExampleProject.Db", "src\Rebels.ExampleProject.Db\Rebels.ExampleProject.Db.csproj", "{9FF445B9-10B1-4DA0-BCF2-0D0D60D5AFB9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rebels.ExampleProject.CQRS.Tests", "Rebels.ExampleProject.CQRS.Tests\Rebels.ExampleProject.CQRS.Tests.csproj", "{D3BD40B6-D709-4677-AAA5-BEEECFEE722D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rebels.ExampleProject.CQRS.Tests", "tests\Rebels.ExampleProject.CQRS.Tests\Rebels.ExampleProject.CQRS.Tests.csproj", "{D3BD40B6-D709-4677-AAA5-BEEECFEE722D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A2D3BA6F-382F-414E-9CCE-935900E46781}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EC43F048-A784-446C-8BFE-A1B098F70435}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0998BD93-4D76-43D6-A718-84C29102E85B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{86D93130-D9C3-47A9-A399-B57DE6CE4784} = {EC43F048-A784-446C-8BFE-A1B098F70435}
+		{E742F4ED-2783-4BBE-96AB-3880CE737798} = {EC43F048-A784-446C-8BFE-A1B098F70435}
+		{30800CEC-BC7C-4F21-A41E-E4413F91AFFC} = {EC43F048-A784-446C-8BFE-A1B098F70435}
+		{740E20C6-2FBE-4763-A6EA-40CDEF9EE7CF} = {EC43F048-A784-446C-8BFE-A1B098F70435}
+		{9FF445B9-10B1-4DA0-BCF2-0D0D60D5AFB9} = {EC43F048-A784-446C-8BFE-A1B098F70435}
+		{D3BD40B6-D709-4677-AAA5-BEEECFEE722D} = {0998BD93-4D76-43D6-A718-84C29102E85B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DB00DCAF-1635-4A4F-9F33-2F65A7CD83D3}
