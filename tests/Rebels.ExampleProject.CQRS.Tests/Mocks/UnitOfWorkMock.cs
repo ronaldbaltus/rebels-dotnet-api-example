@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Rebels.ExampleProject.Data;
+﻿using Rebels.ExampleProject.Data;
 using Rebels.ExampleProject.Data.Entities;
 using Moq;
 using MockQueryable.Moq;

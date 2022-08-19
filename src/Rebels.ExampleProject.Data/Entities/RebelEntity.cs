@@ -1,6 +1,4 @@
-﻿
-
-namespace Rebels.ExampleProject.Data.Entities;
+﻿namespace Rebels.ExampleProject.Data.Entities;
 using System.ComponentModel.DataAnnotations;
 
 public class RebelEntity

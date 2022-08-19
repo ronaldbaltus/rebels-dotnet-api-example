@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Rebels.ExampleProject.CQRS.Tests;
+﻿namespace Rebels.ExampleProject.CQRS.Tests;
 
 public class EntityRepositoryMock
 {

@@ -1,4 +1,6 @@
 # Rebels Example .NET Project
+
+## Intro
 There are many different opinions and flavours on how to setup a .NET Project. In my career I have seen many differences in how solutions are being setup and how the .NET world evolved with new patterns and frameworks. In some cases it got better and in some cases it got worse.
 
 The first patterns that I encountered in my career were simple MVC, where controllers did most of the lifting. Then we moved over to a more repository pattern, were the repositories (as we now see services) did most of the logic. Both these situations were in serverside rendered pages, so yes, views were actually a thing. Slowly the world moved to the usage of single page applications. Gone were the views! The separation in code was also noticable in the job titles, developers were separated between backend and frontend, except for the full-stacks, those developers can do anything! Than we saw the rise of the Model-Repository-Service-Controller pattern (it is made up, but you probably seen it), which in my opinion is too much work.
@@ -8,9 +10,12 @@ Is that really needed? Entity Framework itself is already a repository/unitofwor
 
 I wanted to challenge myself how I would setup a new project with my current state of mind that is easily maintainable, easy to expand and not to dependend on 3rd party packages. 
 
+## Version A
+
 I have chosen to create a very dependency minimal project with CQRS and UnitOfWork pattern.
-The idea is that CQRS Project isn't aware of the EntityFramework dependency, so that you deviate to another database store.
+The idea is that CQRS Project isn't aware of the EntityFramework dependency, so that you deviate to another database store. 
 The other idea is that CQRS Project isn't aware of being a HTTP API either. This way you could create an CLI project for example as well, firing of CQRS messages through the system, and maybe I will add those in the future just to prove a point :)
+I also made a [simpler version of this setup](https://github.com/ronaldbaltus/rebels-dotnet-api-example/tree/version-b), where the there is a hard dependency on Entity Framework on the data project.
 
 What is your opinion of this setup? Is it future proof? Do you think it is maintainable and expandable?
 

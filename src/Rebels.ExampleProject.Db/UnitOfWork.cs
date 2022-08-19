@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Rebels.ExampleProject.Db;
+﻿namespace Rebels.ExampleProject.Db;
 using Data;
 using Rebels.ExampleProject.Data.Entities;
 

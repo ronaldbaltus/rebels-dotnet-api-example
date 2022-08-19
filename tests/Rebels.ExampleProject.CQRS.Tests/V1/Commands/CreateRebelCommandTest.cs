@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Rebels.ExampleProject.CQRS.V1.Commands;
-using Xunit;
+﻿using Rebels.ExampleProject.CQRS.V1.Commands;
 
 namespace Rebels.ExampleProject.CQRS.Tests.V1.Commands;
 

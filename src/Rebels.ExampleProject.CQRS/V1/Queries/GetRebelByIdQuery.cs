@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore;
 using Rebels.ExampleProject.Data;
 using Rebels.ExampleProject.Dtos.V1;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Threading;
 using CSharpFunctionalExtensions;
 
