@@ -1,17 +1,13 @@
 ﻿namespace Rebels.ExampleProject.Data;
-
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Entities;
+using Microsoft.EntityFrameworkCore;
 
 public interface IUnitOfWork
 {
-    public EntityRepository<RebelEntity> Rebels { get; }
+    public DbSet<RebelEntity> Rebels { get; }
 
     public Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
+    public Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default);
 }
 

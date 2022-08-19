@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Rebels.ExampleProject.Db\Rebels.ExampleProject.Db.csproj" />
+    <ProjectReference Include="..\Rebels.ExampleProject.Data\Rebels.ExampleProject.Data.csproj" />
     <ProjectReference Include="..\Rebels.ExampleProject.Dtos\Rebels.ExampleProject.Dtos.csproj" />
   </ItemGroup>
 

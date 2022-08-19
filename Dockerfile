@@ -10,14 +10,14 @@ WORKDIR /src
 COPY . .
 RUN dotnet restore "Rebels.ExampleProject.sln"
 
-RUN dotnet build "Rebels.ExampleProject.CQRS.Tests/Rebels.ExampleProject.CQRS.Tests.csproj" -c Debug -o /app/Tests
+RUN dotnet build "tests/Rebels.ExampleProject.CQRS.Tests/Rebels.ExampleProject.CQRS.Tests.csproj" -c Debug -o /app/Tests
 
-RUN dotnet test "Rebels.ExampleProject.CQRS.Tests/Rebels.ExampleProject.CQRS.Tests.csproj"
+RUN dotnet test "tests/Rebels.ExampleProject.CQRS.Tests/Rebels.ExampleProject.CQRS.Tests.csproj"
 
-RUN dotnet build "Rebels.ExampleProject.Api/Rebels.ExampleProject.Api.csproj" -c Release -o /app/build
+RUN dotnet build "src/Rebels.ExampleProject.Api/Rebels.ExampleProject.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Rebels.ExampleProject.Api/Rebels.ExampleProject.Api.csproj" -c Release -o /app/publish
+RUN dotnet publish "src/Rebels.ExampleProject.Api/Rebels.ExampleProject.Api.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app

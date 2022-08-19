@@ -39,7 +39,7 @@ public class RebelsController : ControllerBase
             return BadRequest(ModelState);
 
         var result = await _mediator.Send(new GetRebelByIdQuery() { Id = id }, cancellationToken);
-
+        
         if (result.IsFailure)
             return NotFound(result.Error);
         else

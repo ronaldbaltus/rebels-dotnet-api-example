@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Rebels.ExampleProject.CQRS.V1.Commands;
-using Xunit;
+﻿using Rebels.ExampleProject.CQRS.V1.Commands;
 
 namespace Rebels.ExampleProject.CQRS.Tests.V1.Commands;
 
@@ -14,11 +8,10 @@ public class CreateRebelCommandTest : BaseUnitTest
     public async Task Handle_Success()
     {
         var handler = new CreateRebelCommand.CreateRebelCommandHandler(
-            UnitOfWorkMock,
-            MapperMock
+            UnitOfWork
         );
 
-        Assert.False(UnitOfWorkMock.Rebels.Any(re => re.Name == "Billy Bob"));
+        Assert.False(UnitOfWork.Rebels.Any(re => re.Name == "Billy Bob"));
 
         var newRebel = await handler.Handle(new CreateRebelCommand()
         {
@@ -26,6 +19,6 @@ public class CreateRebelCommandTest : BaseUnitTest
         }, CancellationToken.None);
 
         Assert.True(newRebel.IsSuccess);
-        Assert.True(UnitOfWorkMock.Rebels.Any(re => re.Name == "Billy Bob"));
+        Assert.True(UnitOfWork.Rebels.Any(re => re.Name == "Billy Bob"));
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Rebels.ExampleProject.CQRS.V1.Queries;
-using Xunit;
+﻿using Rebels.ExampleProject.CQRS.V1.Queries;
 
 namespace Rebels.ExampleProject.CQRS.Tests.V1.Queries;
 
@@ -14,12 +8,12 @@ public class GetRebelByIdQueryTest : BaseUnitTest
     public async Task Handle_Success()
     {
         var handler = new GetRebelByIdQuery.GetRebelByIdQueryHandler(
-            UnitOfWorkMock,
+            UnitOfWork,
             MapperMock
         );
 
         var rnd = new Random();
-        var re = UnitOfWorkMock.Rebels.Skip(rnd.Next(UnitOfWorkMock.Rebels.Count() - 1)).First();
+        var re = UnitOfWork.Rebels.Skip(rnd.Next(UnitOfWork.Rebels.Count() - 1)).First();
 
         var result = await handler.Handle(new GetRebelByIdQuery()
         {
@@ -36,7 +30,7 @@ public class GetRebelByIdQueryTest : BaseUnitTest
     public async Task Handle_Failure()
     {
         var handler = new GetRebelByIdQuery.GetRebelByIdQueryHandler(
-            UnitOfWorkMock,
+            UnitOfWork,
             MapperMock
         );
 

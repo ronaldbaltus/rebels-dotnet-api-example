@@ -1,23 +1,19 @@
-﻿namespace Rebels.ExampleProject.Db;
-using Data.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Rebels.ExampleProject.Data.Entities;
 
-public class DataContext : DbContext
+namespace Rebels.ExampleProject.Data;
+
+public class UnitOfWork : DbContext, IUnitOfWork
 {
     public DbSet<RebelEntity> Rebels { get; set; } = null!;
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        if (optionsBuilder.IsConfigured) return;
-
-        // Use memory if nothing else is defined
-        optionsBuilder.UseInMemoryDatabase("ExampleProject");
-    }
+    public UnitOfWork() : base() { }
+    public UnitOfWork(DbContextOptions options) : base(options) { }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        
+
         modelBuilder
             .Entity<RebelEntity>()
             .HasData(
